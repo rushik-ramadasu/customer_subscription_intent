@@ -14,13 +14,23 @@ An intelligent web application that predicts customer subscription intent by for
 
 ## Project Structure
 
-- `streamlit_app.py`: Main entry point for the Streamlit dashboard.
-- `data_generator.py`: Generates synthetic marketing, demographic, and macroeconomic data.
-- `marketing_optimization.py` & `subscription_model.py`: Core logic for data processing, feature engineering, and model inference.
-- `models/`: Directory containing pre-trained models (XGBoost, Prophet, K-Means, etc.) and scalers.
-- `data/`: Directory storing generated datasets.
-- `implementation_plan.md`: Outlines the detailed architecture and development phases.
-
+```text
+├── data/                                 # Generated marketing datasets
+│   └── synthetic_marketing_data.csv
+├── models/                               # Pre-trained models and scalers
+│   ├── features.txt
+│   ├── kmeans.joblib
+│   ├── prophet_model.pkl
+│   ├── scaler.joblib
+│   └── xgb_model.joblib
+├── data_generator.py                     # Script to generate synthetic datasets
+├── implementation_plan.md                # System outline and architecture
+├── marketing_optimization.py             # Core data processing & engineering
+├── README.md                             # Project documentation
+├── requirements.txt                      # Project dependencies
+├── streamlit_app.py                      # Main entry point for Streamlit dashboard
+└── subscription_model.py                 # Core model inference logic
+```
 ## Installation & Setup
 
 1. **Clone the repository:**
