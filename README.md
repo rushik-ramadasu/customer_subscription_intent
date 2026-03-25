@@ -1,5 +1,7 @@
 # AI-Powered Marketing Optimization System
 
+**Live Demo:** [https://customer-subscription-intent.streamlit.app/](https://customer-subscription-intent.streamlit.app/)
+
 An intelligent web application that predicts customer subscription intent by forecasting monthly conversion rates using a time-series regression model enhanced with external indicators. This multi-level prediction system handles time-level forecasting, customer-level prediction, and campaign-level analysis, presented through an interactive Streamlit dashboard.
 
 ## Features
