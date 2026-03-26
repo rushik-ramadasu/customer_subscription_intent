@@ -35,16 +35,16 @@ col1, col2 = st.columns(2)
 
 with col1:
     st.subheader("Customer Details")
-    age = st.number_input("Age", min_value=18.0, max_value=100.0, value=35.0, step=1.0)
-    income = st.number_input("Income", min_value=0.0, value=50000.0, step=1000.0)
+    age = st.slider("Age", min_value=18.0, max_value=100.0, value=35.0, step=1.0)
+    income = st.slider("Income", min_value=0.0, max_value=500000.0, value=50000.0, step=1000.0)
     has_active_loan = st.selectbox("Has Active Loan", options=[0, 1], format_func=lambda x: "Yes" if x == 1 else "No")
     
 with col2:
     st.subheader("Marketing & Macro factors")
-    campaign_intensity = st.number_input("Campaign Intensity", min_value=1.0, value=1.0, step=1.0)
-    call_duration = st.number_input("Call Duration (seconds)", min_value=0.0, value=120.0, step=10.0)
-    inflation_rate = st.number_input("Inflation Rate (%)", value=2.5, step=0.1)
-    unemployment_rate = st.number_input("Unemployment Rate (%)", value=5.0, step=0.1)
+    campaign_intensity = st.slider("Campaign Intensity", min_value=1.0, max_value=10.0, value=1.0, step=1.0)
+    call_duration = st.slider("Call Duration (seconds)", min_value=0.0, max_value=1800.0, value=120.0, step=10.0)
+    inflation_rate = st.slider("Inflation Rate (%)", min_value=-5.0, max_value=20.0, value=2.5, step=0.1)
+    unemployment_rate = st.slider("Unemployment Rate (%)", min_value=0.0, max_value=30.0, value=5.0, step=0.1)
 
 if st.button("Predict Conversion", type="primary", use_container_width=True):
     with st.spinner("Calculating prediction..."):
@@ -132,6 +132,3 @@ if st.button("Predict Conversion", type="primary", use_container_width=True):
             
         except Exception as e:
             st.error(f"An error occurred during prediction: {e}")
-            '''
-            vibe coded  this page "streamlit_app" don't ask why !!
-            '''
