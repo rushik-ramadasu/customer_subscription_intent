@@ -132,3 +132,6 @@ if st.button("Predict Conversion", type="primary", use_container_width=True):
             
         except Exception as e:
             st.error(f"An error occurred during prediction: {e}")
+            '''
+            vibecoded the forntned and deployment  part mainly this streamliy_app.py(:
+            '''
